@@ -6,7 +6,7 @@ from rest_framework.decorators import api_view
 from rest_framework import status
 from rest_framework.response import Response
 
-# Create your views here.
+# Generic GET and POST view for persons
 @api_view(['GET', 'POST'])
 def personsList(request):
     if request.method == 'GET':
@@ -20,6 +20,8 @@ def personsList(request):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
 
+
+# Generic GET, PUT, DELETE view for a single person
 @api_view(['GET', 'PUT', 'DELETE'])
 def personDetailView(request, id):
     try:
