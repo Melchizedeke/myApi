@@ -1,5 +1,8 @@
 from django.urls import path, include
+from . import views
+
 
 urlpatterns = [
-    path('', include('api.urls'))
+    path('persons/', views.personsList, name='person-list'),
+    path('persons/<int:id>', views.personDetailView, name='person-detail')
 ]
