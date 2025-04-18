@@ -35,7 +35,7 @@ source .venv/bin/activate  # On Windows, use: venv\Scripts\activate
 
 3. Install dependencies
 ```bash
-pip install django djangorestframework requests
+pip install -r requirements.txt
 ```
 
 4. Run migrations
